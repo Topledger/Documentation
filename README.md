@@ -2,7 +2,7 @@
 description: End-to-end blockchain analytics on Solana
 ---
 
-# 👋 Welcome to Top Ledger
+# 👋 Welcome
 
 ## About Us
 

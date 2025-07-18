@@ -10,7 +10,7 @@ Top Ledger is positioned as a comprehensive blockchain analytics platform on Sol
 
 The platform is designed to serve the needs of research and analysis in the blockchain space, providing end-to-end solutions that streamline the process of accessing and interpreting complex blockchain data.
 
-**Answer complex questions like:**
+
 
 When wallets are most active in trading (time of day, day of the week)?
 

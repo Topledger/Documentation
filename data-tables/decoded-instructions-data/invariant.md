@@ -1,0 +1,69 @@
+---
+description: >-
+  The Invariant protocol is a peer-to-peer system for exchanging assets on the
+  Solana blockchain.
+---
+
+# Invariant
+
+#### invarian&#x74;**.txns**
+
+This table has similar schema as of Solana [transactions](../solana-data/transactions.md) table
+
+#### invariant.parsed
+
+The table contains the parsed instructions data for [invariant](https://invariant.app/swap). Data related to instruction type, executing account, account arguments, arguments, etc. is available here.
+
+| Column Name               | Column Type    | Description                                                                                              |
+| ------------------------- | -------------- | -------------------------------------------------------------------------------------------------------- |
+| block\_date               | date           | Event date                                                                                               |
+| block\_time               | timestamp      | The (estimated) time this block was produced                                                             |
+| block\_slot               | bigint         | This block’s slot index in the ledger                                                                    |
+| dapp                      | string         | Solana program address                                                                                   |
+| inner\_instruction\_index | int            | The order of inner instruction of an instruction in a txns                                               |
+| input\_accounts           | array\<string> | Ordered list of accounts to pass to the program                                                          |
+| instruction\_index        | int            | The order of the instruction in a txns                                                                   |
+| instruction\_type         | string         | Name of the function of a Solana program invoked via an instruction                                      |
+| is\_inner\_instruction    | boolean        | Whether the respective instruction of a txns has an inner instruction                                    |
+| tx\_id                    | string         | The first signature in the transaction                                                                   |
+| args                      | \<STRUCT>      | The arguments passed to the invoked function. Generated after decoding the instructions data parameter   |
+
+Some columns in the above table needs to be explained a bit for better understanding. Let's go into what each one of them contains.
+
+#### **input accounts**
+
+<table><thead><tr><th width="374.3333333333333">Field</th><th>Column Type</th></tr></thead><tbody><tr><td>accountX</td><td>string</td></tr><tr><td>accountY</td><td>string</td></tr><tr><td>admin</td><td>string</td></tr><tr><td>feeTier</td><td>string</td></tr><tr><td>lastPosition</td><td>string</td></tr><tr><td>lowerTick</td><td>string</td></tr><tr><td>owner</td><td>string</td></tr><tr><td>payer</td><td>string</td></tr><tr><td>pool</td><td>string</td></tr><tr><td>position</td><td>string</td></tr><tr><td>positionList</td><td>string</td></tr><tr><td>programAuthority</td><td>string</td></tr><tr><td>removedPosition</td><td>string</td></tr><tr><td>rent</td><td>string</td></tr><tr><td>reserveX</td><td>string</td></tr><tr><td>reserveY</td><td>string</td></tr><tr><td>state</td><td>string</td></tr><tr><td>systemProgram</td><td>string</td></tr><tr><td>tick</td><td>string</td></tr><tr><td>tickmap</td><td>string</td></tr><tr><td>tokenProgram</td><td>string</td></tr><tr><td>tokenX</td><td>string</td></tr><tr><td>tokenY</td><td>string</td></tr><tr><td>upperTick</td><td>string</td></tr></tbody></table>
+
+#### args
+
+| Field                                                 | Data Type |
+| ----------------------------------------------------- | --------- |
+| amount                                                | bigint    |
+| byAmountIn                                            | bool      |
+| index                                                 | bigint    |
+| [liquidityDelta](invariant.md#liquiditydelta)         | STRUCT    |
+| lowerTickIndex                                        | int       |
+| [slippageLimitLower](invariant.md#slippagelimitlower) | STRUCT    |
+| [slippageLimitUpper](invariant.md#slippagelimitupper) | STRUCT    |
+| sqrtPriceLimit                                        | double    |
+| tickSpacing                                           | int       |
+| upperTickIndex                                        | int       |
+| xToY                                                  | bool      |
+
+#### liquidityDelta
+
+| Field | Data Type |
+| ----- | --------- |
+| v     | double    |
+
+#### slippageLimitLower
+
+| Field | Data Type |
+| ----- | --------- |
+| v     | double    |
+
+#### slippageLimitUpper
+
+| Field | Data Type |
+| ----- | --------- |
+| v     | double    |

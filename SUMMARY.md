@@ -1,6 +1,6 @@
 # Table of contents
 
-* [👋 Welcome to Top Ledger](README.md)
+* [👋 Welcome](README.md)
 
 ## DATA TABLES
 

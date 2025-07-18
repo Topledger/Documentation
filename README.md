@@ -1,9 +1,9 @@
 ---
-title: Welcome
+title: 👋 Welcome
 description: End-to-end blockchain analytics
 ---
 
-# 👋 Welcome
+
 
 ## About Us
 

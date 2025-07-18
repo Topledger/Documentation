@@ -1,6 +1,6 @@
 ---
 title: Welcome
-description: End-to-end blockchain analytics on Solana
+description: End-to-end blockchain analytics
 ---
 
 # 👋 Welcome
